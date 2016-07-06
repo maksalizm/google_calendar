@@ -1,0 +1,19 @@
+{
+  "name": "google_calendar",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maksalizm/google_calendar.git"
+  },
+  "author": "maksalizm",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maksalizm/google_calendar/issues"
+  },
+  "homepage": "https://github.com/maksalizm/google_calendar#readme"
+}
