@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </head>
 <body>
 <nav class="nav">
@@ -15,13 +18,81 @@
                 오늘
             </div>
             <div class="pagination">
-                
+                <div class="left-pagination"></div>
+                <div class="right-pagination"></div>
+            </div>
+            <div class="date-setting">
+                2016년 7월<span class="data-user-setting">10일 ~ 16일</span>
             </div>
         </div>
     </div>
     <div class="right-nav">
-        
+        <ul class="date-select-list" id="date_select_list" data-status="">
+            <li class="data-select-list-element" data-parent="data_select_list" id="day">
+                일
+            </li>
+            <li class="data-select-list-element" data-parent="data_select_list" id="week">
+                주
+            </li>
+            <li class="data-select-list-element" data-parent="data_select_list" id="month">
+                월
+            </li>
+            <li class="data-select-list-element" data-parent="data_select_list" id="four_day">
+                4일
+            </li>
+            <li class="data-select-list-element" data-parent="data_select_list" id="user_promise_day">
+                일정목록
+            </li>
+        </ul>
+        <div class="dropdown" id="more_view">
+            <div class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true" type="button">
+            더보기
+            </div>
+            <span class="caret"></span>
+            <ul class="dropdown-menu">
+                <li class="dropdown-list-element">인쇄</li>
+                <li class="dropdown-list-element">새로고침</li>
+            </ul>
+        </div>
+        <div class="dropdown" aria-expanded="false" aria-haspopup="true">
+            <div class="setting-image dropdown-toggle" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true" type="button"></div>
+            <span class="caret"></span>
+            <ul class="dropdown-menu">
+                <li class="dropdown-list-element">넓게</li>
+                <li class="dropdown-list-element">보통</li>
+                <li class="dropdown-list-element">좁게</li>
+                <li class="dropdown-list-element-divider"></li>
+                <li class="dropdown-list-element">설정</li>
+                <li class="dropdown-list-element">도움</li>
+                <li class="dropdown-list-element">실험실</li>
+                <li class="dropdown-list-element-divider"></li>
+                <li class="dropdown-list-element">오프라인</li>
+                <li class="dropdown-list-element-divider"></li>
+                <li class="dropdown-list-element">의견보내기</li>
+            </ul>
+        </div>
     </div>
 </nav>
+<main id="calendar_main">
+    <div id="calendar_main_setting" class="calendar-main-setting">
+        <div class="calendar-main-setting-container">
+            <a class="inline-block make-calendar-detail" href="calendar_make_detail.html">
+                만들기
+            </a>
+        </div>
+        <div class="calendar-main-setting-summary" style="display:none;" aria-expanded="true">미니 캘린더</div>
+        <div class="calendar-main-setting-container" id="summary_calendar">
+            <div class="calendar-top">
+
+            </div>
+            <div class="calendar-bottom">
+
+            </div>
+        </div>
+    </div>
+    <div id="calendar_main_content" class="calendar-main-content">
+
+    </div>
+</main>
 </body>
 </html>
