@@ -80,14 +80,141 @@
                 만들기
             </a>
         </div>
-        <div class="calendar-main-setting-summary" style="display:none;" aria-expanded="true">미니 캘린더</div>
+        <div class="calendar-main-setting-summary-title" style="display:none;" aria-expanded="true" role="tab">미니 캘린더</div>
         <div class="calendar-main-setting-container" id="summary_calendar">
-            <div class="calendar-top">
+            <div class="calendar-summary">
+                <table class="calendar-summary-table" cellspacing="0" cellpadding="0" id="mini_calendar">
+                    <colgroup span="7">
 
-            </div>
-            <div class="calendar-bottom">
+                    </colgroup>
+                    <tbody>
+                        <tr class="tr-day">
+                            <th scope="col" class="tr-day-element">
+                                일
+                            </th>
+                            <th scope="col" class="tr-day-element">
+                                월
+                            </th>
+                            <th scope="col" class="tr-day-element">
+                                화
+                            </th>
+                            <th scope="col" class="tr-day-element">
+                                수
+                            </th>
+                            <th scope="col" class="tr-day-element">
+                                목
+                            </th>
+                            <th scope="col" class="tr-day-element">
+                                금
+                            </th>
+                            <th scope="col" class="tr-day-element">
+                                토
+                            </th>
+                        </tr>
+                        <tr id="tr_row_0">
 
+                        </tr>
+                        <tr id="tr_row_1">
+
+                        </tr>
+                        <tr id="tr_row_2">
+
+                        </tr>
+                        <tr id="tr_row_3">
+
+                        </tr>
+                        <tr id="tr_row_4">
+
+                        </tr>
+                        <tr id="tr_row_5">
+
+                        </tr>
+                    </tbody>
+                </table>
             </div>
+        </div>
+        <div class="calendar-main-setting-summary-title" style="display:none;" aria-expanded="true" role="tab">내 캘린더</div>
+        <div class="calendar-main-setting-container" id="my_calendar">
+            <ul class="summary-calendar-list">
+                <li class="summary-calendar-list-element" aria-selected="true" role="option">
+                    <div class="color-box" data-color=""></div>
+                    <span>데이터12</span>
+                    <div id="12" class="summary-calendar-list-element-more"></div>
+                </li>
+                <li class="summary-calendar-list-element" aria-selected="true" role="option">
+                    <div class="color-box" data-color=""></div>
+                    <span>데이터13</span>
+                    <div id="13" class="summary-calendar-list-element-more"></div>
+                </li>
+                <li class="summary-calendar-list-elㄴeent" aria-selected="true" role="option">
+                    <div class="color-box" data-color=""></div>
+                    <span>데이터14</span>
+                    <div id="14" class="summary-calendar-list-element-more"></div>
+                </li>
+            </ul>
+        </div>
+        <div class="calendar-main-setting-summary-title" style="display:none;" aria-expanded="true" role="tab">다른 캘린더</div>
+        <div class="calendar-main-setting-container" id="related_calendar">
+            <form method="POST">
+                <input class="setting-input" placeholder="친구의 캘린더 추가하기" name="add_calendar" id="add_calendar">
+            </form>
+            <ul class="summary-calendar-list">
+                <li class="summary-calendar-list-element" aria-selected="true" role="option">
+                    <div class="color-box" data-color=""></div>
+                    <span>데이터1</span>
+                    <div id="1" class="summary-calendar-list-element-more"></div>
+                </li>
+                <li class="summary-calendar-list-element" aria-selected="true" role="option">
+                    <div class="color-box" data-color=""></div>
+                    <span>데이터2</span>
+                    <div id="2" class="summary-calendar-list-element-more"></div>
+                </li>
+                <li class="summary-calendar-list-elㄴeent" aria-selected="true" role="option">
+                    <div class="color-box" data-color=""></div>
+                    <span>데이터3</span>
+                    <div id="3" class="summary-calendar-list-element-more"></div>
+                </li>
+                <li class="summary-calendar-list-element" aria-selected="true" role="option">
+                    <div class="color-box" data-color=""></div>
+                    <span>데이터4</span>
+                    <div id="4" class="summary-calendar-list-element-more"></div>
+                </li>
+                <li class="summary-calendar-list-element" aria-selected="true" role="option">
+                    <div class="color-box" data-color=""></div>
+                    <span>데이터5</span>
+                    <div id="5" class="summary-calendar-list-element-more"></div>
+                </li>
+                <li class="summary-calendar-list-element" aria-selected="true" role="option">
+                    <div class="color-box" data-color=""></div>
+                    <span>데이터6</span>
+                    <div id="6" class="summary-calendar-list-element-more"></div>
+                </li>
+                <li class="summary-calendar-list-element" aria-selected="true" role="option">
+                    <div class="color-box" data-color=""></div>
+                    <span>데이터7</span>
+                    <div id="7" class="summary-calendar-list-element-more"></div>
+                </li>
+                <li class="summary-calendar-list-element" aria-selected="true" role="option">
+                    <div class="color-box" data-color=""></div>
+                    <span>데이터8</span>
+                    <div id="8" class="summary-calendar-list-element-more"></div>
+                </li>
+                <li class="summary-calendar-list-element" aria-selected="true" role="option">
+                    <div class="color-box" data-color=""></div>
+                    <span>데이터9</span>
+                    <div id="9" class="summary-calendar-list-element-more"></div>
+                </li>
+                <li class="summary-calendar-list-element" aria-selected="true" role="option">
+                    <div class="color-box" data-color=""></div>
+                    <span>데이터10</span>
+                    <div id="10" class="summary-calendar-list-element-more"></div>
+                </li>
+                <li class="summary-calendar-list-element" aria-selected="true" role="option">
+                    <div class="color-box" data-color=""></div>
+                    <span>데이터11</span>
+                    <div id="11" class="summary-calendar-list-element-more"></div>
+                </li>
+            </ul>
         </div>
     </div>
     <div id="calendar_main_content" class="calendar-main-content">
