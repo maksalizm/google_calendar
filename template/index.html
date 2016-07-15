@@ -28,19 +28,19 @@
     </div>
     <div class="right-nav">
         <ul class="date-select-list" id="date_select_list" data-status="">
-            <li class="data-select-list-element" data-parent="data_select_list" id="day">
+            <li class="data-select-list-element" data-parent="data_select_list" data-tab-id="#table_day">
                 일
             </li>
-            <li class="data-select-list-element" data-parent="data_select_list" id="week">
+            <li class="data-select-list-element" data-parent="data_select_list" data-tab-id="#table_week">
                 주
             </li>
-            <li class="data-select-list-element" data-parent="data_select_list" id="month">
+            <li class="data-select-list-element" data-parent="data_select_list" data-tab-id="#table_month">
                 월
             </li>
-            <li class="data-select-list-element" data-parent="data_select_list" id="four_day">
+            <li class="data-select-list-element" data-parent="data_select_list" data-tab-id="#table_four_day">
                 4일
             </li>
-            <li class="data-select-list-element" data-parent="data_select_list" id="user_promise_day">
+            <li class="data-select-list-element" data-parent="data_select_list" data-tab-id="#table_user_promise_day">
                 일정목록
             </li>
         </ul>
@@ -218,7 +218,154 @@
         </div>
     </div>
     <div id="calendar_main_content" class="calendar-main-content">
+        <div class="calendar-main-content-top" id="calendar_main_content_top">
+            <table class="calendar_table calendar_weekend_table" cellpadding="0" cellspacing="0">
+                <tbody>
+                <tr class="calendar-weekend-day">
+                    <td class="calendar-weekend-day-label" rowspan="3">
+                        <div class="calendar-weekend-day-disclose" id="weekend_disclose" aria-expanded="false">
+                        </div>
+                    </td>
+                    <td class="calendar-weekend-day-element" title="7/24 (일)" scope="col">
+                        <span></span>
+                    </td>
+                    <td class="calendar-weekend-day-element" title="7/25 (월)" scope="col">
+                        <span></span>
+                    </td>
+                    <td class="calendar-weekend-day-element" title="7/26 (화)" scope="col">
+                        <span></span>
+                    </td>
+                    <td class="calendar-weekend-day-element" title="7/27 (수)" scope="col">
+                        <span></span>
+                    </td>
+                    <td class="calendar-weekend-day-element" title="7/28 (목)" scope="col">
+                        <span></span>
+                    </td>
+                    <td class="calendar-weekend-day-element" title="7/29 (금)" scope="col">
+                        <span></span>
+                    </td>
+                    <td class="calendar-weekend-day-element" title="7/30 (토)" scope="col">
+                        <span></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="calendar-user-schedule" colspan="7">
+                        <div id="weekend_user_schedule">
+                            <table class="calendar-table calendar-user-schedule" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td class="calendar-user-schedule-td">&nbsp</td>
+                                        <td class="calendar-user-schedule-td">&nbsp</td>
+                                        <td class="calendar-user-schedule-td">&nbsp</td>
+                                        <td class="calendar-user-schedule-td">&nbsp</td>
+                                        <td class="calendar-user-schedule-td">&nbsp</td>
+                                        <td class="calendar-user-schedule-td">&nbsp</td>
+                                        <td class="calendar-user-schedule-td">&nbsp</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="calendar-table calendar-user-schedule" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                    </tr>
+                                    <tr>
+                                        <td class="calendar-user-schedule-td">
+                                            <div class="calendar-content">
+                                                <span>test</span>
+                                            </div>
+                                        </td>
+                                        <td class="calendar-user-schedule-td">
+                                            <div class="calendar-content">
+                                                <span>test</span>
+                                            </div>
+                                        </td>
+                                        <td class="calendar-user-schedule-td">
+                                            <div class="calendar-content">
+                                                <span>test</span>
+                                            </div>
+                                        </td>
+                                        <td class="calendar-user-schedule-td">
+                                            <div class="calendar-content">
+                                                <span>test</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="calendar-user-schedule-td">
+                                            <div class="calendar-content">
+                                                <span>test</span>
+                                            </div>
+                                        </td>
+                                        <td class="calendar-user-schedule-td">
+                                            <div class="calendar-content">
+                                                <span>test</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="calendar-user-schedule-td">
+                                            <div class="calendar-content">
+                                                <span>test</span>
+                                            </div>
+                                        </td>
+                                        <td class="calendar-user-schedule-td">
+                                            <div class="calendar-content">
+                                                <span>test</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
 
+                                    </tr>
+                                    <tr>
+
+                                    </tr>
+                                    <tr>
+
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="calendar-main-content-bottom" id="table_day">
+            <table class="calendar_table" cellpadding="0" cellspacing="0">
+
+            </table>
+        </div>
+        <div class="calendar-main-content-bottom active" id="table_week">
+            <table class="calendar-table" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td class="calendar-static-head">
+
+                    </td>
+                    <td>
+
+                    </td>
+                </tr>
+                <tr>
+
+                </tr>
+            </table>
+        </div>
+        <div class="calendar-main-content-bottom" id="table_month">
+            <table class="calendar_table" cellpadding="0" cellspacing="0">
+
+            </table>
+        </div>
+        <div class="calendar-main-content-bottom" id="table_four_day">
+            <table class="calendar_table" cellpadding="0" cellspacing="0">
+
+            </table>
+        </div>
+        <div class="calendar-main-content-bottom" id="table_user_promise_day">
+            <table class="calendar_table" cellpadding="0" cellspacing="0">
+
+            </table>
+        </div>
     </div>
 </main>
 </body>
