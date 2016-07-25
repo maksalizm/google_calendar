@@ -1,0 +1,26 @@
+.nav {
+    min-height: 50px;
+    padding: 0 0 9px;
+    position: relative;
+    .left-nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        .title {
+            position: absolute;
+            left: 30px;
+            font-size: 20px;
+            line-height: 30px;
+            color: #dd4b39;
+            cursor: pointer;
+        }
+        .page-state {
+            position: absolute;
+            left: 184px;
+        }
+    }
+    .right-nav {
+        position: absolute;
+        right: 0;
+    }
+}
