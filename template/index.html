@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link href="../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="../static/css/main.css" rel="stylesheet" type="text/css">
     <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
     <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -18,7 +18,7 @@
             <div class="calendar-button disabled date-now">
                 오늘
             </div>
-            <div class="pagination">
+            <div class="nav-pagination">
                 <div class="pagination-left"></div>
                 <div class="pagination-right"></div>
             </div>
@@ -29,55 +29,64 @@
     </div>
     <div class="right-nav">
         <ul class="date-select-list" id="date_select_list" data-status="">
-            <li class="data-select-list-element" data-parent="data_select_list" data-tab-id="#table_day">
+            <li class="calendar-button data-select-list-element" data-parent="data_select_list" data-tab-id="#table_day">
                 일
-            </li>
-            <li class="data-select-list-element" data-parent="data_select_list" data-tab-id="#table_week">
+            </li><li class="calendar-button data-select-list-element" data-parent="data_select_list" data-tab-id="#table_week">
                 주
-            </li>
-            <li class="data-select-list-element" data-parent="data_select_list" data-tab-id="#table_month">
+            </li><li class="calendar-button data-select-list-element" data-parent="data_select_list" data-tab-id="#table_month">
                 월
-            </li>
-            <li class="data-select-list-element" data-parent="data_select_list" data-tab-id="#table_four_day">
+            </li><li class="calendar-button data-select-list-element" data-parent="data_select_list" data-tab-id="#table_four_day">
                 4일
-            </li>
-            <li class="data-select-list-element" data-parent="data_select_list" data-tab-id="#table_user_promise_day">
+            </li><li class="calendar-button data-select-list-element" data-parent="data_select_list" data-tab-id="#table_user_promise_day">
                 일정목록
             </li>
         </ul>
-        <div class="dropdown" id="more_view">
-            <div class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true" type="button">
-            더보기
-            </div>
-            <span class="caret"></span>
+        <div class="dropdown">
+            <button class="dropdown-toggle calendar-button" type="button" data-toggle="dropdown">
+                더보기
+                <span class="caret"></span>
+            </button>
             <ul class="dropdown-menu">
-                <li class="dropdown-list-element">인쇄</li>
-                <li class="dropdown-list-element">새로고침</li>
+                <li><a href="#">새로고침</a></li>
             </ul>
         </div>
-        <div class="dropdown" aria-expanded="false" aria-haspopup="true">
-            <div class="setting-image dropdown-toggle" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true" type="button"></div>
-            <span class="caret"></span>
+        <div class="dropdown">
+            <button class="dropdown-toggle calendar-button setting-image" type="button" data-toggle="dropdown">
+                <span class="caret"></span>
+            </button>
             <ul class="dropdown-menu">
-                <li class="dropdown-list-element">넓게</li>
-                <li class="dropdown-list-element">보통</li>
-                <li class="dropdown-list-element">좁게</li>
+                <li class="dropdown-list-element"><a href="#">임시</a></li>
+                <li class="dropdown-list-element"><a href="#">임시</a></li>
+                <li class="dropdown-list-element"><a href="#">임시</a></li>
                 <li class="dropdown-list-element-divider"></li>
-                <li class="dropdown-list-element">설정</li>
-                <li class="dropdown-list-element">도움</li>
-                <li class="dropdown-list-element">실험실</li>
-                <li class="dropdown-list-element-divider"></li>
-                <li class="dropdown-list-element">오프라인</li>
-                <li class="dropdown-list-element-divider"></li>
-                <li class="dropdown-list-element">의견보내기</li>
+                <li class="dropdown-list-element"><a href="#">임시</a></li>
+                <li class="dropdown-list-element"><a href="#">임시</a></li>
+                <li class="dropdown-list-element"><a href="#">임시</a></li>
             </ul>
         </div>
+        <!--<div class="dropdown" aria-expanded="false" aria-haspopup="true">-->
+            <!--<div class="setting-image dropdown-toggle" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true" type="button"></div>-->
+            <!--&lt;!&ndash;<span class="caret"></span>&ndash;&gt;-->
+            <!--<ul class="dropdown-menu">-->
+                <!--<li class="dropdown-list-element">넓게</li>-->
+                <!--<li class="dropdown-list-element">보통</li>-->
+                <!--<li class="dropdown-list-element">좁게</li>-->
+                <!--<li class="dropdown-list-element-divider"></li>-->
+                <!--<li class="dropdown-list-element">설정</li>-->
+                <!--<li class="dropdown-list-element">도움</li>-->
+                <!--<li class="dropdown-list-element">실험실</li>-->
+                <!--<li class="dropdown-list-element-divider"></li>-->
+                <!--<li class="dropdown-list-element">오프라인</li>-->
+                <!--<li class="dropdown-list-element-divider"></li>-->
+                <!--<li class="dropdown-list-element">의견보내기</li>-->
+            <!--</ul>-->
+        <!--</div>-->
     </div>
 </nav>
 <main id="calendar_main">
     <div id="calendar_main_setting" class="calendar-main-setting">
         <div class="calendar-main-setting-container">
-            <a class="inline-block make-calendar-detail" href="calendar_make_detail.html">
+            <a class="btn btn-danger make-calendar-detail" href="calendar_make_detail.html">
                 만들기
             </a>
         </div>

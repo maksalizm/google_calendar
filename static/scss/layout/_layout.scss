@@ -1,7 +1,8 @@
 .nav {
     @include clearfix;
     min-height: 50px;
-    padding: 0 0 9px;
+    padding-top: 5px;
+    border-bottom: 1px solid #dedede;
     .left-nav {
         float: left;
         .title {
@@ -18,7 +19,7 @@
         }
         .page-state {
             display: inline-block;
-            .pagination {
+            .nav-pagination {
                 display: inline-block;
                 vertical-align: middle;
                 margin-top: 5px;
@@ -61,6 +62,18 @@
     }
     .right-nav {
         float: right;
+        .date-select-list {
+            position: relative;
+            display: inline-block;
+            margin-top: 5px;
+            .data-select-list-element {
+                margin-left: -1px;
+                display: inline-block;
+            }
+        }
+        .dropdown {
+            display: inline-block;
+        }
     }
 }
 
@@ -93,5 +106,26 @@
     &:hover {
         background-color: rgba(0,0,0,.05);
         box-shadow: inset 1px 1px 0 rgba(0,0,0,.1);
+        color: #444444;
+    }
+    &:focus {
+        background-color: rgba(0,0,0,.05);
+        box-shadow: inset 1px 1px 0 rgba(0,0,0,.1);
+        color: #444444;
+    }
+}
+#calendar_main{
+    margin-left: 145px;
+}
+
+.calendar-main-setting {
+    position: absolute;
+    left: 0;
+    top: 50px;
+    width: 145px;
+    padding-left: 30px;
+    .calendar-main-setting-container {
+        padding-top: 9px;
+        padding-bottom: 10px;
     }
 }
