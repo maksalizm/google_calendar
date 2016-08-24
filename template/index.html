@@ -8,96 +8,107 @@
     <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
     <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </head>
-<body>
-<nav class="nav">
-    <div class="left-nav">
-        <div class="title">
-            <span>캘린더</span>
+<body style="height:100%">
+<div class="calendar-master">
+    <nav class="nav">
+        <div class="left-nav">
+            <div class="title">
+                <span>캘린더</span>
+            </div>
+            <div class="page-state">
+                <div class="calendar-button disabled date-now">
+                    오늘
+                </div>
+                <div class="nav-pagination">
+                    <div class="pagination-left"></div><div class="pagination-right"></div>
+                </div>
+                <div class="date-setting">
+                    2016년 <span id="data_month_setting" class="data-month-setting">7월</span><span class="data-user-setting" id="data_user_setting">10일 ~ 16일</span>
+                </div>
+            </div>
         </div>
-        <div class="page-state">
-            <div class="calendar-button disabled date-now">
-                오늘
-            </div>
-            <div class="nav-pagination">
-                <div class="pagination-left"></div>
-                <div class="pagination-right"></div>
-            </div>
-            <div class="date-setting">
-                2016년 <span id="data_month_setting" class="data-month-setting">7월</span><span class="data-user-setting" id="data_user_setting">10일 ~ 16일</span>
-            </div>
-        </div>
-    </div>
-    <div class="right-nav">
-        <ul class="date-select-list" id="date_select_list" data-status="">
-            <li class="calendar-button data-select-list-element" data-parent="data_select_list" data-tab-id="#table_day">
-                일
-            </li><li class="calendar-button data-select-list-element" data-parent="data_select_list" data-tab-id="#table_week">
-                주
-            </li><li class="calendar-button data-select-list-element" data-parent="data_select_list" data-tab-id="#table_month">
-                월
-            </li><li class="calendar-button data-select-list-element" data-parent="data_select_list" data-tab-id="#table_four_day">
-                4일
-            </li><li class="calendar-button data-select-list-element" data-parent="data_select_list" data-tab-id="#table_user_promise_day">
-                일정목록
-            </li>
-        </ul>
-        <div class="dropdown">
-            <button class="dropdown-toggle calendar-button" type="button" data-toggle="dropdown">
-                더보기
-                <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu">
-                <li><a href="#">새로고침</a></li>
+        <div class="right-nav">
+            <ul class="date-select-list" id="date_select_list" data-status="">
+                <li class="calendar-button data-select-list-element" data-parent="data_select_list"
+                    data-tab-id="#table_day">
+                    일
+                </li>
+                <li class="calendar-button data-select-list-element" data-parent="data_select_list"
+                    data-tab-id="#table_week">
+                    주
+                </li>
+                <li class="calendar-button data-select-list-element" data-parent="data_select_list"
+                    data-tab-id="#table_month">
+                    월
+                </li>
+                <li class="calendar-button data-select-list-element" data-parent="data_select_list"
+                    data-tab-id="#table_four_day">
+                    4일
+                </li>
+                <li class="calendar-button data-select-list-element" data-parent="data_select_list"
+                    data-tab-id="#table_user_promise_day">
+                    일정목록
+                </li>
             </ul>
-        </div>
-        <div class="dropdown">
-            <button class="dropdown-toggle calendar-button setting-image" type="button" data-toggle="dropdown">
-                <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu">
-                <li class="dropdown-list-element"><a href="#">임시</a></li>
-                <li class="dropdown-list-element"><a href="#">임시</a></li>
-                <li class="dropdown-list-element"><a href="#">임시</a></li>
-                <li class="dropdown-list-element-divider"></li>
-                <li class="dropdown-list-element"><a href="#">임시</a></li>
-                <li class="dropdown-list-element"><a href="#">임시</a></li>
-                <li class="dropdown-list-element"><a href="#">임시</a></li>
-            </ul>
-        </div>
-        <!--<div class="dropdown" aria-expanded="false" aria-haspopup="true">-->
+            <div class="dropdown">
+                <button class="dropdown-toggle calendar-button" type="button" data-toggle="dropdown">
+                    더보기
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="#">새로고침</a></li>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <button class="dropdown-toggle calendar-button setting-image" type="button" data-toggle="dropdown">
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li class="dropdown-list-element"><a href="#">임시</a></li>
+                    <li class="dropdown-list-element"><a href="#">임시</a></li>
+                    <li class="dropdown-list-element"><a href="#">임시</a></li>
+                    <li class="dropdown-list-element-divider"></li>
+                    <li class="dropdown-list-element"><a href="#">임시</a></li>
+                    <li class="dropdown-list-element"><a href="#">임시</a></li>
+                    <li class="dropdown-list-element"><a href="#">임시</a></li>
+                </ul>
+            </div>
+            <!--<div class="dropdown" aria-expanded="false" aria-haspopup="true">-->
             <!--<div class="setting-image dropdown-toggle" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true" type="button"></div>-->
             <!--&lt;!&ndash;<span class="caret"></span>&ndash;&gt;-->
             <!--<ul class="dropdown-menu">-->
-                <!--<li class="dropdown-list-element">넓게</li>-->
-                <!--<li class="dropdown-list-element">보통</li>-->
-                <!--<li class="dropdown-list-element">좁게</li>-->
-                <!--<li class="dropdown-list-element-divider"></li>-->
-                <!--<li class="dropdown-list-element">설정</li>-->
-                <!--<li class="dropdown-list-element">도움</li>-->
-                <!--<li class="dropdown-list-element">실험실</li>-->
-                <!--<li class="dropdown-list-element-divider"></li>-->
-                <!--<li class="dropdown-list-element">오프라인</li>-->
-                <!--<li class="dropdown-list-element-divider"></li>-->
-                <!--<li class="dropdown-list-element">의견보내기</li>-->
+            <!--<li class="dropdown-list-element">넓게</li>-->
+            <!--<li class="dropdown-list-element">보통</li>-->
+            <!--<li class="dropdown-list-element">좁게</li>-->
+            <!--<li class="dropdown-list-element-divider"></li>-->
+            <!--<li class="dropdown-list-element">설정</li>-->
+            <!--<li class="dropdown-list-element">도움</li>-->
+            <!--<li class="dropdown-list-element">실험실</li>-->
+            <!--<li class="dropdown-list-element-divider"></li>-->
+            <!--<li class="dropdown-list-element">오프라인</li>-->
+            <!--<li class="dropdown-list-element-divider"></li>-->
+            <!--<li class="dropdown-list-element">의견보내기</li>-->
             <!--</ul>-->
-        <!--</div>-->
-    </div>
-</nav>
-<main id="calendar_main">
-    <div id="calendar_main_setting" class="calendar-main-setting">
-        <div class="calendar-main-setting-container">
-            <a class="btn btn-danger make-calendar-detail" href="calendar_make_detail.html">
-                만들기
-            </a>
+            <!--</div>-->
         </div>
-        <div class="calendar-main-setting-summary-title" style="display:none;" aria-expanded="true" role="tab">미니 캘린더</div>
-        <div class="calendar-main-setting-container" id="summary_calendar">
-            <div class="calendar-summary">
-                <table class="calendar-summary-table" cellspacing="0" cellpadding="0" id="mini_calendar">
-                    <colgroup span="7">
+    </nav>
+    <main id="calendar_main">
+        <div id="calendar_main_setting" class="calendar-main-setting">
+            <div class="calendar-main-setting-container">
+                <a class="btn btn-danger make-calendar-detail" href="calendar_make_detail.html">
+                    만들기
+                </a>
+            </div>
+            <div class="calendar-main-setting-summary-title" style="display:none;" aria-expanded="true" role="tab">미니
+                캘린더
+            </div>
+            <div class="calendar-main-setting-container" id="summary_calendar">
+                <div class="calendar-summary">
+                    <table class="calendar-summary-table" cellspacing="0" cellpadding="0" id="mini_calendar">
+                        <colgroup span="7">
 
-                    </colgroup>
-                    <tbody>
+                        </colgroup>
+                        <tbody>
                         <tr class="tr-day">
                             <th scope="col" class="tr-day-element">
                                 일
@@ -139,393 +150,443 @@
                         <tr id="tr_row_5">
 
                         </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="calendar-main-setting-summary-title" aria-expanded="true" role="tab">
+                내 캘린더
+                <span class="calendar-more-button" id="my_calendar_more">내 캘린더</span>
+            </div>
+            <div class="calendar-main-setting-container" id="my_calendar">
+                <ul class="summary-calendar-list">
+                    <li class="summary-calendar-list-element" aria-selected="true" role="option">
+                        <div class="color-box" data-color=""></div>
+                        <span>데이터12</span>
+                        <div id="12" class="summary-calendar-list-element-more"></div>
+                    </li>
+                    <li class="summary-calendar-list-element" aria-selected="true" role="option">
+                        <div class="color-box" data-color=""></div>
+                        <span>데이터13</span>
+                        <div id="13" class="summary-calendar-list-element-more"></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="calendar-main-setting-summary-title" aria-expanded="true" role="tab">
+                다른 캘린더
+                <span class="calendar-more-button" id="order_calendar_more">다른 캘린더</span>
+            </div>
+            <div class="calendar-main-setting-container" id="related_calendar">
+                <form method="POST">
+                    <input class="setting-input" placeholder="친구의 캘린더 추가하기" name="add_calendar" id="add_calendar">
+                </form>
+                <ul class="summary-calendar-list">
+                    <li class="summary-calendar-list-element" aria-selected="true" role="option">
+                        <div class="color-box" data-color=""></div>
+                        <span>데이터1</span>
+                        <div id="1" class="summary-calendar-list-element-more"></div>
+                    </li>
+                    <li class="summary-calendar-list-element" aria-selected="true" role="option">
+                        <div class="color-box" data-color=""></div>
+                        <span>데이터2</span>
+                        <div id="2" class="summary-calendar-list-element-more"></div>
+                    </li>
+                    <li class="summary-calendar-list-element" aria-selected="true" role="option">
+                        <div class="color-box" data-color=""></div>
+                        <span>데이터3</span>
+                        <div id="3" class="summary-calendar-list-element-more"></div>
+                    </li>
+                    <li class="summary-calendar-list-element" aria-selected="true" role="option">
+                        <div class="color-box" data-color=""></div>
+                        <span>데이터4</span>
+                        <div id="4" class="summary-calendar-list-element-more"></div>
+                    </li>
+                    <li class="summary-calendar-list-element" aria-selected="true" role="option">
+                        <div class="color-box" data-color=""></div>
+                        <span>데이터5</span>
+                        <div id="5" class="summary-calendar-list-element-more"></div>
+                    </li>
+                    <li class="summary-calendar-list-element" aria-selected="true" role="option">
+                        <div class="color-box" data-color=""></div>
+                        <span>데이터6</span>
+                        <div id="6" class="summary-calendar-list-element-more"></div>
+                    </li>
+                    <li class="summary-calendar-list-element" aria-selected="true" role="option">
+                        <div class="color-box" data-color=""></div>
+                        <span>데이터7</span>
+                        <div id="7" class="summary-calendar-list-element-more"></div>
+                    </li>
+                    <li class="summary-calendar-list-element" aria-selected="true" role="option">
+                        <div class="color-box" data-color=""></div>
+                        <span>데이터8</span>
+                        <div id="8" class="summary-calendar-list-element-more"></div>
+                    </li>
+                    <li class="summary-calendar-list-element" aria-selected="true" role="option">
+                        <div class="color-box" data-color=""></div>
+                        <span>데이터9</span>
+                        <div id="9" class="summary-calendar-list-element-more"></div>
+                    </li>
+                    <li class="summary-calendar-list-element" aria-selected="true" role="option">
+                        <div class="color-box" data-color=""></div>
+                        <span>데이터10</span>
+                        <div id="10" class="summary-calendar-list-element-more"></div>
+                    </li>
+                    <li class="summary-calendar-list-element" aria-selected="true" role="option">
+                        <div class="color-box" data-color=""></div>
+                        <span>데이터11</span>
+                        <div id="11" class="summary-calendar-list-element-more"></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="calendar_main_content" class="calendar-main-content">
+            <div class="calendar-main-content-top" id="calendar_main_content_top">
+                <table class="calendar-table calendar-weekend-table" cellpadding="0" cellspacing="0">
+                    <tbody>
+                    <tr class="calendar-weekend-day">
+                        <td class="calendar-weekend-day-label" rowspan="3">
+                            <div class="calendar-weekend-day-disclose" id="weekend_disclose" aria-expanded="false">
+                                GMT+09
+                            </div>
+                        </td>
+                        <th class="calendar-weekend-day-element" title="7/24 (일)" scope="col">
+                            <span>7/24 (일)</span>
+                        </th>
+                        <th class="calendar-weekend-day-element" title="7/25 (월)" scope="col">
+                            <span>7/25 (월)</span>
+                        </th>
+                        <th class="calendar-weekend-day-element" title="7/26 (화)" scope="col">
+                            <span>7/26 (화)</span>
+                        </th>
+                        <th class="calendar-weekend-day-element" title="7/27 (수)" scope="col">
+                            <span>7/27 (수)</span>
+                        </th>
+                        <th class="calendar-weekend-day-element" title="7/28 (목)" scope="col">
+                            <span>7/28 (목)</span>
+                        </th>
+                        <th class="calendar-weekend-day-element" title="7/29 (금)" scope="col">
+                            <span>7/29 (금)</span>
+                        </th>
+                        <th class="calendar-weekend-day-element" title="7/30 (토)" scope="col">
+                            <span>7/30 (토)</span>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td class="calendar-summary-make-schedule" colspan="7">
+                            <div id="weekend_user_schedule">
+                                <table class="calendar-table calendar-summary-default-schedule" cellpadding="0"
+                                       cellspacing="0" style="height: 62px;">
+                                    <tbody>
+                                    <tr>
+                                        <td class="calendar-summary-default-schedule-td">&nbsp</td>
+                                        <td class="calendar-summary-default-schedule-td">&nbsp</td>
+                                        <td class="calendar-summary-default-schedule-td">&nbsp</td>
+                                        <td class="calendar-summary-default-schedule-td">&nbsp</td>
+                                        <td class="calendar-summary-default-schedule-td">&nbsp</td>
+                                        <td class="calendar-summary-default-schedule-td">&nbsp</td>
+                                        <td class="calendar-summary-default-schedule-td">&nbsp</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <table class="calendar-table calendar-summary-user-schedule" cellpadding="0"
+                                       cellspacing="0">
+                                    <tbody>
+                                    <tr>
+
+                                    </tr>
+                                    <tr>
+                                        <td class="calendar-user-schedule-td">
+                                            &nbsp
+                                        </td>
+                                        <td class="calendar-user-schedule-td">
+                                            &nbsp
+                                        </td>
+                                        <td class="calendar-user-schedule-td">
+                                            &nbsp
+                                        </td>
+                                        <td class="calendar-user-schedule-td">
+                                            <div class="calendar-content">
+                                                <span>test</span>
+                                            </div>
+                                        </td>
+                                        <td class="calendar-user-schedule-td">
+                                            <div class="calendar-content">
+                                                <span>test</span>
+                                            </div>
+                                        </td>
+                                        <td class="calendar-user-schedule-td">
+                                            <div class="calendar-content">
+                                                <span>test</span>
+                                            </div>
+                                        </td>
+                                        <td class="calendar-user-schedule-td">
+                                            <div class="calendar-content">
+                                                <span>test</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="calendar-user-schedule-td">
+                                            &nbsp
+                                        </td>
+                                        <td class="calendar-user-schedule-td">
+                                            &nbsp
+                                        </td>
+                                        <td class="calendar-user-schedule-td">
+                                            &nbsp
+                                        </td>
+                                        <td class="calendar-user-schedule-td">
+                                            &nbsp
+                                        </td>
+                                        <td class="calendar-user-schedule-td">
+                                            &nbsp
+                                        </td>
+                                        <td class="calendar-user-schedule-td">
+                                            <div class="calendar-content">
+                                                <span>test</span>
+                                            </div>
+                                        </td>
+                                        <td class="calendar-user-schedule-td">
+                                            <div class="calendar-content">
+                                                <span>test</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="calendar-user-schedule-td">
+                                            &nbsp
+                                        </td>
+                                        <td class="calendar-user-schedule-td">
+                                            <div class="calendar-content">
+                                                <span>test</span>
+                                            </div>
+                                        </td>
+                                        <td class="calendar-user-schedule-td">
+                                            &nbsp
+                                        </td>
+                                        <td class="calendar-user-schedule-td">
+                                            <div class="calendar-content">
+                                                <span>test</span>
+                                            </div>
+                                        </td>
+                                        <td class="calendar-user-schedule-td">
+                                            &nbsp
+                                        </td>
+                                        <td class="calendar-user-schedule-td">
+                                            &nbsp
+                                        </td>
+                                        <td class="calendar-user-schedule-td">
+                                            &nbsp
+                                        </td>
+                                    </tr>
+                                    <tr>
+
+                                    </tr>
+                                    <tr>
+
+                                    </tr>
+                                    <tr>
+
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </td>
+                    </tr>
                     </tbody>
                 </table>
             </div>
+            <div class="calendar-main-content-bottom active" id="table_week" aria-hidden="false">
+                <table class="calendar-table calendar-main-weekend-table" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td style="width:60px;"></td>
+                        <td class="calendar-table-col calender-hour" colspan="7" style="position: relative; border-bottom: 1px solid #dedede;">
+                            <div class="calendar-static-container">
+                                <div class="calender-static-content">
+                                    <div class="calendar-static-content-element">
+                                        <div class="calendar-static-content-element-block"></div>
+                                    </div>
+                                    <div class="calendar-static-content-element">
+                                        <div class="calendar-static-content-element-block"></div>
+                                    </div>
+                                    <div class="calendar-static-content-element">
+                                        <div class="calendar-static-content-element-block"></div>
+                                    </div>
+                                    <div class="calendar-static-content-element">
+                                        <div class="calendar-static-content-element-block"></div>
+                                    </div>
+                                    <div class="calendar-static-content-element">
+                                        <div class="calendar-static-content-element-block"></div>
+                                    </div>
+                                    <div class="calendar-static-content-element">
+                                        <div class="calendar-static-content-element-block"></div>
+                                    </div>
+                                    <div class="calendar-static-content-element">
+                                        <div class="calendar-static-content-element-block"></div>
+                                    </div>
+                                    <div class="calendar-static-content-element">
+                                        <div class="calendar-static-content-element-block"></div>
+                                    </div>
+                                    <div class="calendar-static-content-element">
+                                        <div class="calendar-static-content-element-block"></div>
+                                    </div>
+                                    <div class="calendar-static-content-element">
+                                        <div class="calendar-static-content-element-block"></div>
+                                    </div>
+                                    <div class="calendar-static-content-element">
+                                        <div class="calendar-static-content-element-block"></div>
+                                    </div>
+                                    <div class="calendar-static-content-element">
+                                        <div class="calendar-static-content-element-block"></div>
+                                    </div>
+                                    <div class="calendar-static-content-element">
+                                        <div class="calendar-static-content-element-block"></div>
+                                    </div>
+                                    <div class="calendar-static-content-element">
+                                        <div class="calendar-static-content-element-block"></div>
+                                    </div>
+                                    <div class="calendar-static-content-element">
+                                        <div class="calendar-static-content-element-block"></div>
+                                    </div>
+                                    <div class="calendar-static-content-element">
+                                        <div class="calendar-static-content-element-block"></div>
+                                    </div>
+                                    <div class="calendar-static-content-element">
+                                        <div class="calendar-static-content-element-block"></div>
+                                    </div>
+                                    <div class="calendar-static-content-element">
+                                        <div class="calendar-static-content-element-block"></div>
+                                    </div>
+                                    <div class="calendar-static-content-element">
+                                        <div class="calendar-static-content-element-block"></div>
+                                    </div>
+                                    <div class="calendar-static-content-element">
+                                        <div class="calendar-static-content-element-block"></div>
+                                    </div>
+                                    <div class="calendar-static-content-element">
+                                        <div class="calendar-static-content-element-block"></div>
+                                    </div>
+                                    <div class="calendar-static-content-element">
+                                        <div class="calendar-static-content-element-block"></div>
+                                    </div>
+                                    <div class="calendar-static-content-element">
+                                        <div class="calendar-static-content-element-block"></div>
+                                    </div>
+                                    <div class="calendar-static-content-element">
+                                        <div class="calendar-static-content-element-block"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="calendar-table-col calendar-static-head">
+                            <div class="calendar-static-head-element">
+                                오전 12시
+                            </div>
+                            <div class="calendar-static-head-element">
+                                오전 1시
+                            </div>
+                            <div class="calendar-static-head-element">
+                                오전 2시
+                            </div>
+                            <div class="calendar-static-head-element">
+                                오전 3시
+                            </div>
+                            <div class="calendar-static-head-element">
+                                오전 4시
+                            </div>
+                            <div class="calendar-static-head-element">
+                                오전 5시
+                            </div>
+                            <div class="calendar-static-head-element">
+                                오전 6시
+                            </div>
+                            <div class="calendar-static-head-element">
+                                오전 7시
+                            </div>
+                            <div class="calendar-static-head-element">
+                                오전 8시
+                            </div>
+                            <div class="calendar-static-head-element">
+                                오전 9시
+                            </div>
+                            <div class="calendar-static-head-element">
+                                오전 10시
+                            </div>
+                            <div class="calendar-static-head-element">
+                                오전 11시
+                            </div>
+                            <div class="calendar-static-head-element">
+                                오후 12시
+                            </div>
+                            <div class="calendar-static-head-element">
+                                오후 1시
+                            </div>
+                            <div class="calendar-static-head-element">
+                                오후 2시
+                            </div>
+                            <div class="calendar-static-head-element">
+                                오후 3시
+                            </div>
+                            <div class="calendar-static-head-element">
+                                오후 4시
+                            </div>
+                            <div class="calendar-static-head-element">
+                                오후 5시
+                            </div>
+                            <div class="calendar-static-head-element">
+                                오후 6시
+                            </div>
+                            <div class="calendar-static-head-element">
+                                오후 7시
+                            </div>
+                            <div class="calendar-static-head-element">
+                                오후 8시
+                            </div>
+                            <div class="calendar-static-head-element">
+                                오후 9시
+                            </div>
+                            <div class="calendar-static-head-element">
+                                오후 10시
+                            </div>
+                            <div class="calendar-static-head-element">
+                                오후 11시
+                            </div>
+                        </td>
+                        <td class="calendar-dynamic-content">
+                            <div id="week_make_promise_1"></div>
+                            <div id="week_make_promise_1_over"></div>
+                        </td>
+                        <td class="calendar-dynamic-content">
+                            <div id="week_make_promise_2"></div>
+                            <div id="week_make_promise_2_over"></div>
+                        </td>
+                        <td class="calendar-dynamic-content">
+                            <div id="week_make_promise_3"></div>
+                            <div id="week_make_promise_3_over"></div>
+                        </td>
+                        <td class="calendar-dynamic-content">
+                            <div id="week_make_promise_4"></div>
+                            <div id="week_make_promise_4_over"></div>
+                        </td>
+                        <td class="calendar-dynamic-content">
+                            <div id="week_make_promise_5"></div>
+                            <div id="week_make_promise_5_over"></div>
+                        </td>
+                        <td class="calendar-dynamic-content">
+                            <div id="week_make_promise_6"></div>
+                            <div id="week_make_promise_6_over"></div>
+                        </td>
+                        <td class="calendar-dynamic-content">
+                            <div id="week_make_promise_7"></div>
+                            <div id="week_make_promise_7_over"></div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
         </div>
-        <div class="calendar-main-setting-summary-title" style="display:none;" aria-expanded="true" role="tab">내 캘린더</div>
-        <div class="calendar-main-setting-container" id="my_calendar">
-            <ul class="summary-calendar-list">
-                <li class="summary-calendar-list-element" aria-selected="true" role="option">
-                    <div class="color-box" data-color=""></div>
-                    <span>데이터12</span>
-                    <div id="12" class="summary-calendar-list-element-more"></div>
-                </li>
-                <li class="summary-calendar-list-element" aria-selected="true" role="option">
-                    <div class="color-box" data-color=""></div>
-                    <span>데이터13</span>
-                    <div id="13" class="summary-calendar-list-element-more"></div>
-                </li>
-                <li class="summary-calendar-list-elㄴeent" aria-selected="true" role="option">
-                    <div class="color-box" data-color=""></div>
-                    <span>데이터14</span>
-                    <div id="14" class="summary-calendar-list-element-more"></div>
-                </li>
-            </ul>
-        </div>
-        <div class="calendar-main-setting-summary-title" style="display:none;" aria-expanded="true" role="tab">다른 캘린더</div>
-        <div class="calendar-main-setting-container" id="related_calendar">
-            <form method="POST">
-                <input class="setting-input" placeholder="친구의 캘린더 추가하기" name="add_calendar" id="add_calendar">
-            </form>
-            <ul class="summary-calendar-list">
-                <li class="summary-calendar-list-element" aria-selected="true" role="option">
-                    <div class="color-box" data-color=""></div>
-                    <span>데이터1</span>
-                    <div id="1" class="summary-calendar-list-element-more"></div>
-                </li>
-                <li class="summary-calendar-list-element" aria-selected="true" role="option">
-                    <div class="color-box" data-color=""></div>
-                    <span>데이터2</span>
-                    <div id="2" class="summary-calendar-list-element-more"></div>
-                </li>
-                <li class="summary-calendar-list-elㄴeent" aria-selected="true" role="option">
-                    <div class="color-box" data-color=""></div>
-                    <span>데이터3</span>
-                    <div id="3" class="summary-calendar-list-element-more"></div>
-                </li>
-                <li class="summary-calendar-list-element" aria-selected="true" role="option">
-                    <div class="color-box" data-color=""></div>
-                    <span>데이터4</span>
-                    <div id="4" class="summary-calendar-list-element-more"></div>
-                </li>
-                <li class="summary-calendar-list-element" aria-selected="true" role="option">
-                    <div class="color-box" data-color=""></div>
-                    <span>데이터5</span>
-                    <div id="5" class="summary-calendar-list-element-more"></div>
-                </li>
-                <li class="summary-calendar-list-element" aria-selected="true" role="option">
-                    <div class="color-box" data-color=""></div>
-                    <span>데이터6</span>
-                    <div id="6" class="summary-calendar-list-element-more"></div>
-                </li>
-                <li class="summary-calendar-list-element" aria-selected="true" role="option">
-                    <div class="color-box" data-color=""></div>
-                    <span>데이터7</span>
-                    <div id="7" class="summary-calendar-list-element-more"></div>
-                </li>
-                <li class="summary-calendar-list-element" aria-selected="true" role="option">
-                    <div class="color-box" data-color=""></div>
-                    <span>데이터8</span>
-                    <div id="8" class="summary-calendar-list-element-more"></div>
-                </li>
-                <li class="summary-calendar-list-element" aria-selected="true" role="option">
-                    <div class="color-box" data-color=""></div>
-                    <span>데이터9</span>
-                    <div id="9" class="summary-calendar-list-element-more"></div>
-                </li>
-                <li class="summary-calendar-list-element" aria-selected="true" role="option">
-                    <div class="color-box" data-color=""></div>
-                    <span>데이터10</span>
-                    <div id="10" class="summary-calendar-list-element-more"></div>
-                </li>
-                <li class="summary-calendar-list-element" aria-selected="true" role="option">
-                    <div class="color-box" data-color=""></div>
-                    <span>데이터11</span>
-                    <div id="11" class="summary-calendar-list-element-more"></div>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div id="calendar_main_content" class="calendar-main-content">
-        <div class="calendar-main-content-top" id="calendar_main_content_top">
-            <table class="calendar_table calendar_weekend_table" cellpadding="0" cellspacing="0">
-                <tbody>
-                <tr class="calendar-weekend-day">
-                    <td class="calendar-weekend-day-label" rowspan="3">
-                        <div class="calendar-weekend-day-disclose" id="weekend_disclose" aria-expanded="false">
-                        </div>
-                    </td>
-                    <td class="calendar-weekend-day-element" title="7/24 (일)" scope="col">
-                        <span></span>
-                    </td>
-                    <td class="calendar-weekend-day-element" title="7/25 (월)" scope="col">
-                        <span></span>
-                    </td>
-                    <td class="calendar-weekend-day-element" title="7/26 (화)" scope="col">
-                        <span></span>
-                    </td>
-                    <td class="calendar-weekend-day-element" title="7/27 (수)" scope="col">
-                        <span></span>
-                    </td>
-                    <td class="calendar-weekend-day-element" title="7/28 (목)" scope="col">
-                        <span></span>
-                    </td>
-                    <td class="calendar-weekend-day-element" title="7/29 (금)" scope="col">
-                        <span></span>
-                    </td>
-                    <td class="calendar-weekend-day-element" title="7/30 (토)" scope="col">
-                        <span></span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="calendar-user-schedule" colspan="7">
-                        <div id="weekend_user_schedule">
-                            <table class="calendar-table calendar-user-schedule" cellpadding="0" cellspacing="0">
-                                <tbody>
-                                    <tr>
-                                        <td class="calendar-user-schedule-td">&nbsp</td>
-                                        <td class="calendar-user-schedule-td">&nbsp</td>
-                                        <td class="calendar-user-schedule-td">&nbsp</td>
-                                        <td class="calendar-user-schedule-td">&nbsp</td>
-                                        <td class="calendar-user-schedule-td">&nbsp</td>
-                                        <td class="calendar-user-schedule-td">&nbsp</td>
-                                        <td class="calendar-user-schedule-td">&nbsp</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <table class="calendar-table calendar-user-schedule" cellpadding="0" cellspacing="0">
-                                <tbody>
-                                    <tr>
-                                    </tr>
-                                    <tr>
-                                        <td class="calendar-user-schedule-td">
-                                            <div class="calendar-content">
-                                                <span>test</span>
-                                            </div>
-                                        </td>
-                                        <td class="calendar-user-schedule-td">
-                                            <div class="calendar-content">
-                                                <span>test</span>
-                                            </div>
-                                        </td>
-                                        <td class="calendar-user-schedule-td">
-                                            <div class="calendar-content">
-                                                <span>test</span>
-                                            </div>
-                                        </td>
-                                        <td class="calendar-user-schedule-td">
-                                            <div class="calendar-content">
-                                                <span>test</span>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="calendar-user-schedule-td">
-                                            <div class="calendar-content">
-                                                <span>test</span>
-                                            </div>
-                                        </td>
-                                        <td class="calendar-user-schedule-td">
-                                            <div class="calendar-content">
-                                                <span>test</span>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="calendar-user-schedule-td">
-                                            <div class="calendar-content">
-                                                <span>test</span>
-                                            </div>
-                                        </td>
-                                        <td class="calendar-user-schedule-td">
-                                            <div class="calendar-content">
-                                                <span>test</span>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-
-                                    </tr>
-                                    <tr>
-
-                                    </tr>
-                                    <tr>
-
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
-        <div class="calendar-main-content-bottom active" id="table_week" aria-hidden="false">
-            <table class="calendar-table calendar-main-weekend-table" cellpadding="0" cellspacing="0">
-                <tr>
-                    <td class="calendar-table-col calendar-static-head">
-                        <div class="calendar-static-head-element">
-                            오전 12시
-                        </div>
-                        <div class="calendar-static-head-element">
-                            오전 1시
-                        </div>
-                        <div class="calendar-static-head-element">
-                            오전 2시
-                        </div>
-                        <div class="calendar-static-head-element">
-                            오전 3시
-                        </div>
-                        <div class="calendar-static-head-element">
-                            오전 4시
-                        </div>
-                        <div class="calendar-static-head-element">
-                            오전 5시
-                        </div>
-                        <div class="calendar-static-head-element">
-                            오전 6시
-                        </div>
-                        <div class="calendar-static-head-element">
-                            오전 7시
-                        </div>
-                        <div class="calendar-static-head-element">
-                            오전 8시
-                        </div>
-                        <div class="calendar-static-head-element">
-                            오전 9시
-                        </div>
-                        <div class="calendar-static-head-element">
-                            오전 10시
-                        </div>
-                        <div class="calendar-static-head-element">
-                            오전 11시
-                        </div>
-                        <div class="calendar-static-head-element">
-                            오후 12시
-                        </div>
-                        <div class="calendar-static-head-element">
-                            오후 1시
-                        </div>
-                        <div class="calendar-static-head-element">
-                            오후 2시
-                        </div>
-                        <div class="calendar-static-head-element">
-                            오후 3시
-                        </div>
-                        <div class="calendar-static-head-element">
-                            오후 4시
-                        </div>
-                        <div class="calendar-static-head-element">
-                            오후 5시
-                        </div>
-                        <div class="calendar-static-head-element">
-                            오후 6시
-                        </div>
-                        <div class="calendar-static-head-element">
-                            오후 7시
-                        </div>
-                        <div class="calendar-static-head-element">
-                            오후 8시
-                        </div>
-                        <div class="calendar-static-head-element">
-                            오후 9시
-                        </div>
-                        <div class="calendar-static-head-element">
-                            오후 10시
-                        </div>
-                        <div class="calendar-static-head-element">
-                            오후 11시
-                        </div>
-                    </td>
-                    <td class="calendar-table-col calender-static-content calender-hour" colspan="7">
-                        <div class="calendar-static-content-element">
-                            <div class="calendar-static-content-element-block"></div>
-                        </div>
-                        <div class="calendar-static-content-element">
-                            <div class="calendar-static-content-element-block"></div>
-                        </div>
-                        <div class="calendar-static-content-element">
-                            <div class="calendar-static-content-element-block"></div>
-                        </div>
-                        <div class="calendar-static-content-element">
-                            <div class="calendar-static-content-element-block"></div>
-                        </div>
-                        <div class="calendar-static-content-element">
-                            <div class="calendar-static-content-element-block"></div>
-                        </div>
-                        <div class="calendar-static-content-element">
-                            <div class="calendar-static-content-element-block"></div>
-                        </div>
-                        <div class="calendar-static-content-element">
-                            <div class="calendar-static-content-element-block"></div>
-                        </div>
-                        <div class="calendar-static-content-element">
-                            <div class="calendar-static-content-element-block"></div>
-                        </div>
-                        <div class="calendar-static-content-element">
-                            <div class="calendar-static-content-element-block"></div>
-                        </div>
-                        <div class="calendar-static-content-element">
-                            <div class="calendar-static-content-element-block"></div>
-                        </div>
-                        <div class="calendar-static-content-element">
-                            <div class="calendar-static-content-element-block"></div>
-                        </div>
-                        <div class="calendar-static-content-element">
-                            <div class="calendar-static-content-element-block"></div>
-                        </div>
-                        <div class="calendar-static-content-element">
-                            <div class="calendar-static-content-element-block"></div>
-                        </div>
-                        <div class="calendar-static-content-element">
-                            <div class="calendar-static-content-element-block"></div>
-                        </div>
-                        <div class="calendar-static-content-element">
-                            <div class="calendar-static-content-element-block"></div>
-                        </div>
-                        <div class="calendar-static-content-element">
-                            <div class="calendar-static-content-element-block"></div>
-                        </div>
-                        <div class="calendar-static-content-element">
-                            <div class="calendar-static-content-element-block"></div>
-                        </div>
-                        <div class="calendar-static-content-element">
-                            <div class="calendar-static-content-element-block"></div>
-                        </div>
-                        <div class="calendar-static-content-element">
-                            <div class="calendar-static-content-element-block"></div>
-                        </div>
-                        <div class="calendar-static-content-element">
-                            <div class="calendar-static-content-element-block"></div>
-                        </div>
-                        <div class="calendar-static-content-element">
-                            <div class="calendar-static-content-element-block"></div>
-                        </div>
-                        <div class="calendar-static-content-element">
-                            <div class="calendar-static-content-element-block"></div>
-                        </div>
-                        <div class="calendar-static-content-element">
-                            <div class="calendar-static-content-element-block"></div>
-                        </div>
-                        <div class="calendar-static-content-element">
-                            <div class="calendar-static-content-element-block"></div>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="calendar-dynamic-content">
-                        <div id="week_make_promise_1"></div>
-                        <div id="week_make_promise_1_over"></div>
-                    </td>
-                    <td class="calendar-dynamic-content">
-                        <div id="week_make_promise_2"></div>
-                        <div id="week_make_promise_2_over"></div>
-                    </td>
-                    <td class="calendar-dynamic-content">
-                        <div id="week_make_promise_3"></div>
-                        <div id="week_make_promise_3_over"></div>
-                    </td>
-                    <td class="calendar-dynamic-content">
-                        <div id="week_make_promise_4"></div>
-                        <div id="week_make_promise_4_over"></div>
-                    </td>
-                    <td class="calendar-dynamic-content">
-                        <div id="week_make_promise_5"></div>
-                        <div id="week_make_promise_5_over"></div>
-                    </td>
-                    <td class="calendar-dynamic-content">
-                        <div id="week_make_promise_6"></div>
-                        <div id="week_make_promise_6_over"></div>
-                    </td>
-                    <td class="calendar-dynamic-content">
-                        <div id="week_make_promise_7"></div>
-                        <div id="week_make_promise_7_over"></div>
-                    </td>
-                </tr>
-            </table>
-        </div>
-    </div>
-</main>
+    </main>
+</div>
 </body>
 </html>
