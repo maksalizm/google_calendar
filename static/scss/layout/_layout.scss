@@ -97,6 +97,7 @@
     min-width: 70px;
     padding: 0 8px;
     text-align: center;
+    vertical-align: middle;
     &.disabled {
         background: #f2f2f2;
         color: #b8b8b8;
@@ -261,4 +262,30 @@
     height: 960px;
     margin-bottom: -960px;
     border-left: 1px solid #dedede;
+}
+
+.color-red {
+    color: #fff;
+    background-color: #d9534f;
+    border-color: #d43f3a;
+    &:hover {
+        color: #fff;
+        background-color: #c9302c;
+        border-color: #ac2925;
+    }
+}
+
+.text-indent {
+    text-indent: -9999px;
+}
+
+.calendar-back-button {
+    width: 13px;
+    height: 15px;
+    background: url('../img/combined.png') -106px -77px no-repeat;
+}
+
+.calendar-button-image-outer-box {
+    padding-top: 7px;
+    padding-left: 18px;
 }
