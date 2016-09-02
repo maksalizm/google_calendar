@@ -293,3 +293,11 @@
 .nav[role="tablist"] {
     font-size: 12px;
 }
+
+.calendar-gutter {
+    position: relative;
+}
+
+div[id ^= "week_make_promise"] {
+    position: relative;
+}
