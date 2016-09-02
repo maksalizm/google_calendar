@@ -36,8 +36,33 @@
             <input class="calendar-date-input" name="end_day">
             <input class="calendar-date-input" name="end_hour">
         </div>
-
+        <ul class="nav nav-tabs" role="tablist" id="google_calendar_tab" style="min-height: 0;">
+            <li class="active">
+                <a href="#detail_information" role="tab" data-toggle="tab" >
+                    일부 세부 정보
+                </a>
+            </li>
+            <li>
+                <a href="#find_time" role="tab" data-toggle="tab">
+                    시간 찾기
+                </a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="detail_information">
+                ...1
+            </div>
+            <div role="tabpanel" class="tab-pane" id="find_time">
+                ...2
+            </div>
+        </div>
     </main>
 </div>
+<script>
+    $('#google_calendar_tab a').on('click',function(evt){
+        evt.preventDefault();
+        $(this).tab('show');
+    })
+</script>
 </body>
 </html>
