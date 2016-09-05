@@ -6,7 +6,6 @@ function CalendarDate(title, nth, half){
     this.nth = nth;
     this.half = half;
     this.date = '';
-    this.location = '';
 }
 
 CalendarDate.prototype = {
@@ -60,7 +59,7 @@ CalendarDate.prototype = {
             '</div>'
     },
     setLocation: function(topvalue){
-        this.location = topvalue;
+
     }
 
 };
