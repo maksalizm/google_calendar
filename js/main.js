@@ -33,9 +33,9 @@ CalendarDate.prototype = {
 
         if(!isDrag){
             if (this.half) {
-                this.date += remainder +' 30분' + '~' + remainder + 1 + ' 30분';
+                this.date += remainder +' 30분' + '~' + (remainder + 1) + ' 30분';
             } else {
-                this.date += remainder + '~' + remainder + 1;
+                this.date += remainder + '~' + (remainder + 1);
             }
         } else {
             if(this.half){
@@ -57,9 +57,5 @@ CalendarDate.prototype = {
             '<dd>' + this.title + '</dd>'+
             '</dl>'+
             '</div>'
-    },
-    setLocation: function(topvalue){
-
     }
-
 };

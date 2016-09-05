@@ -259,6 +259,7 @@
 }
 
 .calendar-dynamic-content {
+    position: relative;
     height: 960px;
     margin-bottom: -960px;
     border-left: 1px solid #dedede;
@@ -300,4 +301,7 @@
 
 div[id ^= "week_make_promise"] {
     position: relative;
+    z-index: 1004;
+    height: 960px;
+    margin-bottom: -960px;
 }
