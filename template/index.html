@@ -602,14 +602,25 @@
 <script src="../js/main.js" type="text/javascript"></script>
 <script>
     $("div[id^='week_make_promise_']").click(function (event) {
+        event.stopPropagation();
         var $self = $(this);
         var data_location = event.pageY - $self.offset().top;
-
+        var dom, dom_location;
         var new_calendar = new CalendarDate('test', getClickDate(data_location), false);
-//        console.log(getClickDate(data_location));
+        var DateSettingArray = JSON.parse($.cookie('DateSettingArray'));
         new_calendar.setDate(false);
-        new_calendar.makeDOM();
-        console.log(new_calendar.makeDOM());
+        for(var i =0; i < DateSettingArray.length -1; i++){
+            if(DateSettingArray[i] < data_location && data_location < DateSettingArray[i+1]){
+                dom_location = DateSettingArray[i];
+            }
+        }
+        dom = new_calendar.makeDOM(dom_location);
+        if($self.find('.calendar-gutter').length){
+            $self.find('.calendar-gutter').append(dom);
+        } else {
+            $self.prev().find('.calendar-gutter').append(dom);
+        }
+        $self.find('.calendar-gutter').append(dom);
     });
 
     function getClickDate(raw_date){

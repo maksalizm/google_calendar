@@ -6,6 +6,7 @@ function CalendarDate(title, nth, half){
     this.nth = nth;
     this.half = half;
     this.date = '';
+    this.location = location;
 }
 
 CalendarDate.prototype = {
@@ -48,8 +49,8 @@ CalendarDate.prototype = {
 
     },
 
-    makeDOM : function(){
-        return '<div class="calendar-data-box chip">' +
+    makeDOM : function(location){
+        return '<div class="calendar-data-box chip" style="top:'+location+'px">' +
             '<dl>' +
             '<dt>' +
             '<span>' + this.date + '</span>'+
@@ -57,5 +58,6 @@ CalendarDate.prototype = {
             '<dd>' + this.title + '</dd>'+
             '</dl>'+
             '</div>'
-    }
+    },
 };
+
