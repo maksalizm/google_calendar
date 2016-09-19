@@ -606,14 +606,21 @@
         var $self = $(this);
         var data_location = event.pageY - $self.offset().top;
         var dom, dom_location;
-        var new_calendar = new CalendarDate('test', getClickDate(data_location), false);
+        var new_calendar;
         var DateSettingArray = JSON.parse($.cookie('DateSettingArray'));
+
+
+        new_calendar  = new CalendarDate('test', getClickDate(data_location), false);
+
+
         new_calendar.setDate(false);
         for(var i =0; i < DateSettingArray.length -1; i++){
             if(DateSettingArray[i] < data_location && data_location < DateSettingArray[i+1]){
                 dom_location = DateSettingArray[i];
             }
         }
+
+
         dom = new_calendar.makeDOM(dom_location);
         if($self.find('.calendar-gutter').length){
             $self.find('.calendar-gutter').append(dom);
@@ -621,13 +628,14 @@
             $self.prev().find('.calendar-gutter').append(dom);
         }
         $self.find('.calendar-gutter').append(dom);
+        console.log(CalendarDate);
     });
 
     function getClickDate(raw_date){
         var date = parseInt(raw_date, 10);
         var DateSettingArray = JSON.parse($.cookie('DateSettingArray'));
         var i;
-
+        console.log(DateSettingArray);
         //console.log(date);
         for(i = 0 ; i < DateSettingArray.length - 1; i++){
             if(DateSettingArray[i] < date && date < DateSettingArray[i+1]){
@@ -651,12 +659,10 @@
     }
 
     $(document).ready(function(){
-        if(JSON.parse($.cookie('DateSettingArray')) === undefined || JSON.parse($.cookie('DateSettingArray')) === '' || JSON.parse($.cookie('DateSettingArray')) === null){
+        if($.cookie('DateSettingArray') === undefined || $.cookie('DateSettingArray') === '' || $.cookie('DateSettingArray') === null){
             $.cookie('DateSettingArray', JSON.stringify(recursiveForDate([],0)));
         }
     });
-
-
 
 </script>
 </body>
